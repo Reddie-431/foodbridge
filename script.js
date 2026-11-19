@@ -70,3 +70,12 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
 });
+// Stamp local IST date and time on form submission
+document.querySelectorAll('form').forEach(form => {
+    form.addEventListener('submit', () => {
+        const timeField = form.querySelector('.local-time-field');
+        if (timeField) {
+            timeField.value = new Date().toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' }) + ' IST';
+        }
+    });
+});
