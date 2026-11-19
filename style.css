@@ -1,0 +1,439 @@
+:root {
+    --bg-color: #fcfcfc;
+    --text-color: #2a2a2a;
+    --accent-color: #4a5d23; /* Earthy Green */
+    --light-accent: #eef2e6;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/* ---------------- HEADER & NAVIGATION ---------------- */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 5%;
+    background: transparent;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 500;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--text-color);
+    margin-left: 2rem;
+    font-size: 0.95rem;
+    transition: color 0.3s ease;
+}
+
+nav a.active, nav a:hover {
+    color: var(--accent-color);
+    font-weight: bold;
+}
+
+/* Top Nav Donate Button */
+.btn-nav {
+    background-color: var(--accent-color);
+    color: white !important;
+    padding: 0.5rem 1.2rem;
+    border-radius: 4px;
+    font-weight: bold !important;
+}
+
+.btn-nav:hover {
+    background-color: #3a4a1c;
+}
+
+/* ---------------- HERO SECTION ---------------- */
+.hero {
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: var(--light-accent);
+    padding: 0 5%;
+    margin-top: 0; 
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    color: var(--accent-color);
+}
+
+.hero p {
+    font-size: 1.2rem;
+    color: #555;
+}
+
+/* Hero Buttons */
+.hero-buttons {
+    margin-top: 2rem;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.btn {
+    background-color: var(--accent-color);
+    color: white;
+    padding: 0.8rem 1.5rem;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #3a4a1c;
+}
+
+.btn-outline {
+    background-color: transparent;
+    color: var(--accent-color);
+    padding: 0.8rem 1.5rem;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 4px;
+    border: 2px solid var(--accent-color);
+    transition: all 0.3s ease;
+}
+
+.btn-outline:hover {
+    background-color: var(--accent-color);
+    color: white;
+}
+
+/* ---------------- MAIN SECTIONS ---------------- */
+.features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 3rem;
+    padding: 5rem 10%;
+    text-align: center;
+}
+
+.feature-box h5 {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    color: var(--accent-color);
+}
+
+.feature-box p {
+    font-size: 0.95rem;
+    color: #666;
+}
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    background-color: var(--accent-color);
+    color: white;
+    padding: 4rem 10%;
+    text-align: center;
+    gap: 2rem;
+}
+
+.stats h2 {
+    font-size: 3rem;
+    font-weight: 300;
+    margin-bottom: 0.5rem;
+}
+
+.stats p {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.testimonials {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 3rem;
+    padding: 5rem 10%;
+    background-color: #fff;
+}
+
+.quote p {
+    font-size: 1.1rem;
+    font-style: italic;
+    margin-bottom: 1rem;
+    color: #444;
+}
+
+.quote span {
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: var(--accent-color);
+}
+
+/* ---------------- EXPANDED INITIATIVES ---------------- */
+.initiatives {
+    padding: 5rem 10%;
+    background-color: var(--light-accent);
+}
+
+.section-header {
+    margin-bottom: 2.5rem;
+}
+
+.section-header h2 {
+    font-size: 2.2rem;
+    color: var(--accent-color);
+    margin-bottom: 0.5rem;
+}
+
+.section-header p {
+    color: #555;
+    font-size: 1.05rem;
+}
+
+.initiative-card {
+    display: flex;
+    align-items: flex-start;
+    padding: 2rem 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.initiative-card:last-child {
+    border-bottom: none;
+}
+
+.initiative-card .number {
+    font-size: 2rem;
+    font-weight: 300;
+    color: var(--accent-color);
+    margin-right: 3rem;
+}
+
+.initiative-card .text {
+    max-width: 750px;
+}
+
+.initiative-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.25rem;
+}
+
+.initiative-card .text p {
+    color: #666;
+    margin-top: 0.5rem;
+    margin-bottom: 0.85rem;
+    line-height: 1.7;
+}
+
+.initiative-card .tag {
+    display: inline-block;
+    background-color: #ffffff;
+    color: var(--accent-color);
+    border: 1px solid #cfd8be;
+    padding: 0.35rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.82rem;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+}
+
+/* ---------------- FOOTER ---------------- */
+footer {
+    padding: 4rem 10% 2rem;
+    background-color: #111;
+    color: #fff;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.footer-grid p, .footer-grid a {
+    color: #aaa;
+    text-decoration: none;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.footer-grid a:hover {
+    color: #fff;
+}
+
+.copyright {
+    text-align: center;
+    border-top: 1px solid #333;
+    padding-top: 2rem;
+    font-size: 0.85rem;
+    color: #777;
+}
+
+/* ---------------- POPUP MODALS (Forms) ---------------- */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    background-color: #fff;
+    padding: 2.5rem;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 500px;
+    position: relative;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+}
+
+.modal-content h2 {
+    color: var(--accent-color);
+    margin-bottom: 0.5rem;
+}
+
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: #888;
+    transition: color 0.3s;
+}
+
+.close-btn:hover {
+    color: #333;
+}
+
+.modal-content form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.modal-content input, .modal-content textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.modal-content textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+/* ---------------- MOBILE RESPONSIVE DESIGN ---------------- */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        padding: 1rem 5%;
+        background-color: #ffffff;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    }
+
+    nav {
+        margin-top: 0.8rem;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.8rem;
+    }
+
+    nav a {
+        margin-left: 0;
+        font-size: 0.9rem;
+    }
+
+    .hero {
+        padding: 7.5rem 5% 3rem; /* Extra top/bottom breathing room so header doesn't overlap */
+        height: auto;
+        min-height: 60vh;
+    }
+
+    .hero h1 {
+        font-size: 2.1rem;
+        line-height: 1.25;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        width: 100%;
+        max-width: 280px;
+        margin: 1.5rem auto 0;
+    }
+
+    /* Makes hero buttons full width inside their container for easy thumb tapping */
+    .hero-buttons .btn,
+    .hero-buttons .btn-outline {
+        width: 100%;
+        text-align: center;
+    }
+
+    /* Stacks the Contact & Help two-column grid on mobile */
+    .features {
+        grid-template-columns: 1fr !important;
+        padding: 3rem 6%;
+        gap: 2rem;
+    }
+
+    .stats,
+    .testimonials,
+    .initiatives {
+        padding: 3rem 6%;
+    }
+
+    .initiative-card {
+        flex-direction: column;
+    }
+
+    .initiative-card .number {
+        margin-bottom: 0.5rem;
+    }
+
+    /* Keeps popup forms scrollable when the mobile keyboard pops up */
+    .modal-content {
+        padding: 1.75rem 1.25rem;
+        width: 92%;
+        max-height: 90vh;
+        overflow-y: auto;
+    }
+
+    footer {
+        padding: 3rem 6% 2rem;
+    }
+}

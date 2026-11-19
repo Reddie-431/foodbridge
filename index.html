@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FoodBridge | Zero Hunger</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   <!-- HEADER -->
+    <header>
+        <div class="logo">FOODBRIDGE</div>
+        <nav>
+            <a href="index.html" class="active">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="contact.html">Contact & Help</a>
+            <a href="#donate" class="btn-nav">Donate</a>
+        </nav>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Bridging the gap between surplus and scarcity.</h1>
+            <p>Join our network to fight hunger and reduce food waste.</p>
+            
+            <!-- NEW BUTTONS ADDED HERE -->
+            <div class="hero-buttons">
+                <a href="#donate" class="btn">Donate Food</a>
+                <a href="#volunteer" class="btn-outline">Join as Volunteer</a>
+            </div>
+        </div>
+    </section>
+   <!-- DONATE FOOD MODAL -->
+    <div id="donateModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>Donate Food</h2>
+            <p>Please provide your details so we can coordinate the pickup or drop-off.</p>
+            
+            <!-- UPDATED FORMSPREE LINK HERE -->
+            <form action="https://formspree.io/f/mljjlggb" method="POST">
+                <input type="hidden" name="form_type" value="Food Donation">
+                <input type="text" name="name" placeholder="Full Name or Business Name" required>
+                <input type="email" name="email" placeholder="Email Address" required>
+                <input type="tel" name="phone" placeholder="Phone Number" required>
+                <textarea name="food_details" placeholder="What type of food are you donating?" required></textarea>
+                <button type="submit" class="btn">Submit Donation Info</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- JOIN AS VOLUNTEER MODAL -->
+    <div id="volunteerModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>Join Our Team</h2>
+            <p>Sign up to volunteer and help us distribute food.</p>
+            
+            <!-- UPDATED FORMSPREE LINK HERE -->
+            <form action="https://formspree.io/f/mljjlggb" method="POST">
+                <input type="hidden" name="form_type" value="Volunteer Application">
+                <input type="text" name="name" placeholder="Full Name" required>
+                <input type="email" name="email" placeholder="Email Address" required>
+                <input type="tel" name="phone" placeholder="Phone Number" required>
+                <textarea name="availability" placeholder="When are you available?" required></textarea>
+                <textarea name="skills" placeholder="Any specific skills?"></textarea>
+                <button type="submit" class="btn">Submit Volunteer Form</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- HOW IT WORKS SECTION -->
+    <section class="features">
+        <div class="feature-box">
+            <h5>Donate Food</h5>
+            <p>Restaurants and individuals can upload surplus food listings to our platform, ensuring safe and untouched surplus reaches those in need.</p>
+        </div>
+        <div class="feature-box">
+            <h5>Connect with Volunteers</h5>
+            <p>Volunteers and NGOs browse nearby food donations and reserve portions, creating a transparent and organized collection process.</p>
+        </div>
+        <div class="feature-box">
+            <h5>Feed People in Need</h5>
+            <p>Once collected, food is distributed directly to homeless and underprivileged individuals, providing immediate relief and sustainable hope.</p>
+        </div>
+    </section>
+
+    <!-- IMPACT STATS -->
+    <section class="stats">
+        <div>
+            <h2>50K+</h2>
+            <p>Total Donations</p>
+        </div>
+        <div>
+            <h2>120K</h2>
+            <p>Portions Distributed</p>
+        </div>
+        <div>
+            <h2>450</h2>
+            <p>Active Volunteers</p>
+        </div>
+        <div>
+            <h2>200T</h2>
+            <p>Food Saved</p>
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="testimonials">
+        <div class="quote">
+            <p>"The network has transformed our kitchen waste into a vital resource for our community. It's a win-win for everyone involved."</p>
+            <span>— Sarah Jenkins, Local Restaurant Owner</span>
+        </div>
+        <div class="quote">
+            <p>"As a volunteer, I've seen firsthand how sharing surplus food creates a ripple effect of hope and connection in our city."</p>
+            <span>— David Miller, Community Volunteer</span>
+        </div>
+        <div class="quote">
+            <p>"FoodBridge is the most transparent way to fight hunger. Seeing the impact on our neighbors is truly inspiring."</p>
+            <span>— Elena Rodriguez, NGO Director</span>
+        </div>
+    </section>
+
+<!-- GALLERY / INITIATIVES -->
+    <section class="initiatives">
+        <div class="section-header">
+            <h2>Our Core Initiatives</h2>
+            <p>How we turn community generosity into daily meals across the city.</p>
+        </div>
+
+        <div class="initiative-card">
+            <div class="number">01</div>
+            <div class="text">
+                <h3>Fresh Harvest</h3>
+                <p>We partner directly with local farms, grocery stores, and bakeries to rescue unsold fruits, vegetables, and baked goods before they spoil, ensuring nutritious ingredients reach community kitchens daily.</p>
+                <span class="tag">15+ Local Farm Partners • Daily Morning Pickups</span>
+            </div>
+        </div>
+
+        <div class="initiative-card">
+            <div class="number">02</div>
+            <div class="text">
+                <h3>Volunteer Action</h3>
+                <p>Our trained network of drivers, sorters, and meal-prep teams operates 7 days a week. Using real-time dispatch alerts, volunteers claim nearby surplus pickups and deliver them within safe temperature windows.</p>
+                <span class="tag">450+ Active Volunteers • 2-Hour Shift Flexibility</span>
+            </div>
+        </div>
+
+        <div class="initiative-card">
+            <div class="number">03</div>
+            <div class="text">
+                <h3>Sustainable Waste</h3>
+                <p>Every ton of rescued food prevents harmful methane emissions in landfills. We follow strict food-safety handling protocols and compost any inedible organic scraps with local urban gardens.</p>
+                <span class="tag">200+ Tons Diverted • Zero-Landfill Goal</span>
+            </div>
+        </div>
+
+        <div class="initiative-card">
+            <div class="number">04</div>
+            <div class="text">
+                <h3>Hopeful Distribution</h3>
+                <p>Hot meals, fresh produce boxes, and hygiene kits are distributed with dignity through partner shelters, pop-up street pantries, and mobile vans—no paperwork or barriers required.</p>
+                <span class="tag">12 Distribution Hubs • Open to All</span>
+            </div>
+        </div>
+    </section>
+   <!-- FOOTER -->
+    <footer>
+        <div class="footer-grid">
+            <div class="brand">
+                <h2>FOODBRIDGE</h2>
+            </div>
+            <div class="contact">
+                <p>3-23, Nereducherla, Suryapet, Telangana, 508218</p>
+                <p><a href="mailto:hello@foodbridge.org">hello@foodbridge.org</a></p>
+                <p><a href="tel:+919010296636">+91 9010296636</a></p>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2026 FoodBridge Network. Sustainable Development Goal 2: Zero Hunger.</p>
+        </div>
+    </footer>
+
+    <!-- Connects your JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
