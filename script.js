@@ -70,23 +70,3 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
 });
-// Stamp local IST date and time on form submission
-document.querySelectorAll('form').forEach(form => {
-    form.addEventListener('submit', () => {
-        const timeField = form.querySelector('.local-time-field');
-        if (timeField) {
-            timeField.value = new Date().toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' }) + ' IST';
-        }
-    });
-});
-document.querySelectorAll('form').forEach(form => {
-    form.addEventListener('submit', () => {
-        const istTime = new Date().toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' }) + ' IST';
-        const timeField = form.querySelector('.local-time-field');
-        const subjectField = form.querySelector('.subject-time-field');
-        const formType = form.querySelector('input[name="form_type"]')?.value || 'Submission';
-
-        if (timeField) timeField.value = istTime;
-        if (subjectField) subjectField.value = `FOODBRIDGE: ${formType} (${istTime})`;
-    });
-});
